@@ -35,6 +35,7 @@
     "jquery": "*",
     "less-middleware": "1.0.x",
     "mocha": "*",
+    "mongodb": "^2.0.33",
     "morgan": "~1.0.0",
     "openapi-node": "*",
     "promised-mongo": "*",

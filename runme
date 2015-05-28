@@ -1,0 +1,13 @@
+export PATH="$HOME/.local/n/bin:$PATH"
+
+PWD=`pwd`
+PID=`ps -ef | grep node | grep "$PWD" | awk '{print $2, $3}'`
+
+for pid in $PID; do kill $pid;done
+
+#cp content/data/*db tmp/
+#cp content/data/*openssl src/
+npm install
+bower install
+#  NODE_ENV=development forever start $PWD/app.js
+NODE_ENV=development nodemon $PWD/server.js 2>&1 > ./log/file.alex2006hw.com.log &
